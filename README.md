@@ -1,4 +1,11 @@
 A Pretraining Numerical Reasoning Model for Ordinal Constrained KBQA 
+====
+This is the code for the paper:
+    [A Pretraining Numerical Reasoning Model for Ordinal Constrained
+Question Answering on Knowledge Base](https://aclanthology.org/2021.findings-emnlp.159/) in EMNLP 2021 Findings.
+
+An advanced model to deal with the same problem can be found in the following paper: 
+    [Injecting Numerical Reasoning Skills into Knowledge Base Question Answering Models](https://arxiv.org/abs/2112.06109) in arxiv preprint.
 
 Dataset
 ===
