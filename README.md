@@ -1,5 +1,5 @@
-A Pretraining Numerical Reasoning Model for Ordinal Constrained KBQA 
-===
+# A Pretraining Numerical Reasoning Model for Ordinal Constrained KBQA 
+
 This is the code for the paper:
     [A Pretraining Numerical Reasoning Model for Ordinal Constrained
 Question Answering on Knowledge Base](https://aclanthology.org/2021.findings-emnlp.159/) in EMNLP 2021 Findings.
@@ -7,22 +7,19 @@ Question Answering on Knowledge Base](https://aclanthology.org/2021.findings-emn
 An advanced model to deal with the same problem can be found in the following paper: 
     [Injecting Numerical Reasoning Skills into Knowledge Base Question Answering Models](https://arxiv.org/abs/2112.06109) in arxiv preprint.
 
-Requirements
-==
+## Requirements
+
 - Python 3.8
 - Pytorch >= 1.6
 
-Dataset
-==
+## Dataset
 Download preprocessed datasets from [google drive], and unzip it into dataset folder.
 
-Reasoning
-==
+## Reasoning
 To train and evaluate the reasoning model, change to directory ./NumReasoning. You can also download checkpoints from [here](https://drive.google.com/drive/folders/1jFcV1vj6wbAVuIOMyjgULZNkLBXjmDPa?usp=sharing), and unzip it into checkpoint folder.
 
 
-Basic Reasoning
----
+### Basic Reasoning
 To test the original reasoning model.
 
     python main_nsm.py --model_name gnn --data_folder ../CWQ/ --checkpoint_dir ../checkpoint/CWQ_num/ --experiment_name eval_CWQ_gnn_num_50epoch
@@ -30,8 +27,7 @@ To test the original reasoning model.
     --eps 0.95 --num_epoch 50 --use_self_loop --lr 1e-4 --q_type seq --word_emb_file word_emb_300d.npy --reason_kb --encode_type --loss_type kl 
     --load_experiment CWQ_nsm-h1.ckpt --is_eval
 
-Num Reasoning
----
+### Num Reasoning
 To train the Num reasoning model.
 
     python main_nsm.py --model_name gnn --data_folder ../CWQ/ --checkpoint_dir ../checkpoint/CWQ_num/ --experiment_name CWQ_gnn_num_50epoch
