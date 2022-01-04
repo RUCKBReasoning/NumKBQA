@@ -1,6 +1,4 @@
-A Pretraining Numerical Reasoning Model for Ordinal Constrained Question Answering on Knowledge Base
-
-This is the code for 
+A Pretraining Numerical Reasoning Model for Ordinal Constrained Question Answering on Knowledge Base 
 Dataset
 ===
 
