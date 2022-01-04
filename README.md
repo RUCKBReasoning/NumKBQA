@@ -13,7 +13,7 @@ An advanced model to deal with the same problem can be found in the following pa
 - Pytorch >= 1.6
 
 ## Dataset
-Download preprocessed datasets from [google drive], and unzip it into dataset folder.
+Download preprocessed datasets from [google drive](https://drive.google.com/drive/folders/16OK_vGRDNbE6Y9kYCaYrVSXTYk9m5pdB?usp=sharing), and unzip it into dataset folder.
 
 ## Reasoning
 To train and evaluate the reasoning model, change to directory ./NumReasoning. You can also download checkpoints from [here](https://drive.google.com/drive/folders/1jFcV1vj6wbAVuIOMyjgULZNkLBXjmDPa?usp=sharing), and unzip it into checkpoint folder.
