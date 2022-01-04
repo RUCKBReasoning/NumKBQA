@@ -7,13 +7,18 @@ Question Answering on Knowledge Base](https://aclanthology.org/2021.findings-emn
 An advanced model to deal with the same problem can be found in the following paper: 
     [Injecting Numerical Reasoning Skills into Knowledge Base Question Answering Models](https://arxiv.org/abs/2112.06109) in arxiv preprint.
 
+Requirements
+===
+- Python 3.8
+- Pytorch >= 1.6
+
 Dataset
 ===
-
+Download preprocessed datasets from [google drive], and unzip it into dataset folder.
 
 Reasoning
 ===
-To train the reasoning model, Change to directory ./NumReasoning.
+To train and evaluate the reasoning model, change to directory ./NumReasoning. You can also download checkpoints from [here](https://drive.google.com/drive/folders/1jFcV1vj6wbAVuIOMyjgULZNkLBXjmDPa?usp=sharing), and unzip it into checkpoint folder.
 
 
 Basic Reasoning
