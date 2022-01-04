@@ -1,0 +1,9 @@
+# train number model
+
+CUDA_VISIBLE_DEVICES=0 nohup python main_nsm.py --model_name gnn --data_folder ../CWQ_old/ --checkpoint_dir ../checkpoint/CWQ_num/ --entity2id entities_expanded.txt --batch_size 40 --test_batch_size 40 --num_step 4 --entity_dim 50 --word_dim 300 --node_dim 50 --eval_every 1 --experiment_name CWQ_gnn_num_50epoch --eps 0.95 --num_epoch 50 --use_self_loop --lr 1e-4 --q_type seq --word_emb_file word_emb_300d.npy --reason_kb --encode_type --loss_type kl --use_num --use_nsm_num --relation_embedding_file ../CWQ/cwq_rel_embedding.npy --load_num cwq37_nsm_trainemb.pth --load_experiment CWQ_nsm-h1.ckpt >train_num.log 2>&1 & 
+
+# evaluate pure model
+CUDA_VISIBLE_DEVICES=0 python main_nsm.py --model_name gnn --data_folder ../CWQ/ --checkpoint_dir ../checkpoint/CWQ_num/ --entity2id entities_expanded.txt --batch_size 40 --test_batch_size 40 --num_step 4 --entity_dim 50 --word_dim 300 --node_dim 50 --eval_every 1 --experiment_name eval_CWQ_gnn_num_50epoch --eps 0.95 --num_epoch 50 --use_self_loop --lr 1e-4 --q_type seq --word_emb_file word_emb_300d.npy --reason_kb --encode_type --loss_type kl --load_experiment CWQ_nsm-h1.ckpt --is_eval
+
+# evaluate saved number model
+CUDA_VISIBLE_DEVICES=1 nohup python main_nsm.py --model_name gnn --data_folder ../CWQ/ --checkpoint_dir ../checkpoint/CWQ_num/ --entity2id entities_expanded.txt --batch_size 40 --test_batch_size 40 --num_step 4 --entity_dim 50 --word_dim 300 --node_dim 50 --eval_every 1 --experiment_name eval_CWQ_gnn_num_50epoch --eps 0.95 --num_epoch 50 --use_self_loop --lr 1e-4 --q_type seq --word_emb_file word_emb_300d.npy --reason_kb --encode_type --loss_type kl --use_num --use_nsm_num --relation_embedding_file ../CWQ/cwq_rel_embedding.npy --load_num ../num_pretrain/cwq37_nsm_trainemb.pth --load_experiment CWQ_gnn_num_50epoch-h1.ckpt --is_eval >test_num.log 2>&1 & 
