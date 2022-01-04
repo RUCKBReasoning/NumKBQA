@@ -15,7 +15,7 @@ To train the basic reasoning model.
 
 To test the original reasoning model.
 
-CUDA_VISIBLE_DEVICES=0 python main_nsm.py --model_name gnn --data_folder ../CWQ/ --checkpoint_dir ../checkpoint/CWQ_num/ --entity2id entities_expanded.txt --batch_size 40 --test_batch_size 40 --num_step 4 --entity_dim 50 --word_dim 300 --node_dim 50 --eval_every 1 --experiment_name eval_CWQ_gnn_num_50epoch --eps 0.95 --num_epoch 50 --use_self_loop --lr 1e-4 --q_type seq --word_emb_file word_emb_300d.npy --reason_kb --encode_type --loss_type kl --load_experiment CWQ_nsm-h1.ckpt --is_eval
+    python main_nsm.py --model_name gnn --data_folder ../CWQ/ --checkpoint_dir ../checkpoint/CWQ_num/ --entity2id entities_expanded.txt --batch_size 40 --test_batch_size 40 --num_step 4 --entity_dim 50 --word_dim 300 --node_dim 50 --eval_every 1 --experiment_name eval_CWQ_gnn_num_50epoch --eps 0.95 --num_epoch 50 --use_self_loop --lr 1e-4 --q_type seq --word_emb_file word_emb_300d.npy --reason_kb --encode_type --loss_type kl --load_experiment CWQ_nsm-h1.ckpt --is_eval
 
 Num Reasoning
 ---
